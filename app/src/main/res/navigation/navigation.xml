@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.example.adv160420002uts.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/actionLoginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDoctor"
+        android:name="com.example.adv160420002uts.view.DoctorFragment"
+        android:label="Doctor"
+        tools:layout="@layout/fragment_doctor" >
+        <action
+            android:id="@+id/actionDoctorDetailFragment"
+            app:destination="@id/doctorDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.example.adv160420002uts.view.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/actionProfileLogin"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/actionEditProfile"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemMedicine"
+        android:name="com.example.adv160420002uts.view.MedicineFragment"
+        android:label="Medicine"
+        tools:layout="@layout/fragment_medicine" >
+        <action
+            android:id="@+id/actionMedicineDetailFragment"
+            app:destination="@id/medicineDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDetailFragment"
+        android:name="com.example.adv160420002uts.view.DoctorDetailFragment"
+        android:label="Detail Doctor"
+        tools:layout="@layout/fragment_doctor_detail">
+        <argument
+            android:name="doctor_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineDetailFragment"
+        android:name="com.example.adv160420002uts.view.MedicineDetailFragment"
+        android:label="Detail Medicine"
+        tools:layout="@layout/fragment_medicine_detail">
+        <argument
+            android:name="medicine_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.adv160420002uts.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/actionItemHome"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.adv160420002uts.view.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/actionItemProfile"
+            app:destination="@id/itemProfile" />
+    </fragment>
+</navigation>
